@@ -256,8 +256,8 @@ public class Manager {
                         mapTemp.maxPlayerPerZone, mapTemp.wayPoints, mapTemp.effectMaps);
                 if (map != null) {
                     SantaCity santaCity = (SantaCity) map;
-                    // 3600000 = 1H
-                    santaCity.timer(21, 0, 0, 7200000);
+                    // Luôn mở map boss 24/7
+                    santaCity.open();
                 }
             } else {
                 map = new nro.models.map.Map(mapTemp.id,

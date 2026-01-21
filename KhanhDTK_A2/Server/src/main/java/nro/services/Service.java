@@ -565,6 +565,50 @@ public class Service {
                     return;
                 }
             }
+            if (text.startsWith("getpet") || text.startsWith("/getpet")) {
+                String[] parts = text.split(" ");
+                if (player.pet == null) {
+                    if (parts.length == 1) {
+                        // Tạo đệ tử thường cùng hệ với sư phụ
+                        PetService.gI().createNormalPet(player, player.gender);
+                        Service.getInstance().sendThongBao(player, "Bạn đã nhận đệ tử thành công!");
+                    } else {
+                        String petType = parts[1].toLowerCase();
+                        switch (petType) {
+                            case "mabu":
+                                PetService.gI().createMabuPet(player, player.gender);
+                                Service.getInstance().sendThongBao(player, "Bạn đã nhận đệ tử Mabu thành công!");
+                                break;
+                            case "bulo":
+                                PetService.gI().createPetBulo(player, player.gender);
+                                Service.getInstance().sendThongBao(player, "Bạn đã nhận đệ tử Black Super Saiyan 5 thành công!");
+                                break;
+                            case "cell":
+                                PetService.gI().createPetCellBao(player, player.gender);
+                                Service.getInstance().sendThongBao(player, "Bạn đã nhận đệ tử Gogeta Ssj4 thành công!");
+                                break;
+                            case "bill":
+                                PetService.gI().createPetBillNhi(player, player.gender);
+                                Service.getInstance().sendThongBao(player, "Bạn đã nhận đệ tử Bill Nhí thành công!");
+                                break;
+                            case "fide":
+                                PetService.gI().createPetFideTrau(player, player.gender);
+                                Service.getInstance().sendThongBao(player, "Bạn đã nhận đệ tử Fide Trẩu thành công!");
+                                break;
+                            case "picolo":
+                                PetService.gI().createPetSuperPicolo(player, player.gender);
+                                Service.getInstance().sendThongBao(player, "Bạn đã nhận đệ tử Super Picolo thành công!");
+                                break;
+                            default:
+                                Service.getInstance().sendThongBao(player, "Loại pet không tồn tại! Các loại: mabu, bulo, cell, bill, fide, picolo");
+                                break;
+                        }
+                    }
+                } else {
+                    Service.getInstance().sendThongBao(player, "Bạn đã có đệ tử rồi!");
+                }
+                return;
+            }
             if (text.equals("thread")) {
                 Service.gI().sendThongBao(player, "Số lượng thread hiện tại: " + Thread.activeCount() + "");
                 return;

@@ -134,9 +134,9 @@ public class RewardService {
                             || ItemService.gI().getTemplate(ir.tempId).gender > 2) {
 
                         // up SKH
-                        if (Util.isTrue(1, 1000000)) {
+                        if (Util.isTrue(1, 50)) {
                             ItemMap itemMap = null;
-                            if (Util.isTrue(90, 100)) {
+                            if (Util.isTrue(80, 100)) {
                                 itemMap = new ItemMap(mob.zone,
                                         ConstItem.LIST_ITEM_CLOTHES[player.gender][Util.nextInt(0, 3)][0],
                                         1, x, yEnd, player.id);

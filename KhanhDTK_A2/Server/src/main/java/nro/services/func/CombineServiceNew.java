@@ -3229,19 +3229,19 @@ public class CombineServiceNew {
     private int getTileNangCapDo(int level) {
         switch (level) {
             case 0:
-                return 80;
+                return 100;
             case 1:
-                return 50;
+                return 100;
             case 2:
-                return 20;
+                return 100;
             case 3:
-                return 10;
+                return 100;
             case 4:
-                return 7;
+                return 100;
             case 5:
-                return 3;
+                return 100;
             case 6:
-                return 1;
+                return 100;
         }
         return 0;
     }

@@ -1,4 +1,4 @@
-﻿package nro.services.func;
+package nro.services.func;
 
 import nro.consts.ConstItem;
 import nro.consts.ConstNpc;

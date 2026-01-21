@@ -2448,7 +2448,7 @@ public class CombineServiceNew {
                 if (InventoryService.gI().getCountEmptyBag(player) > 0
                         && player.inventory.gold >= COST_DAP_DO_KICH_HOAT) {
                     player.inventory.gold -= COST_DAP_DO_KICH_HOAT;
-                    int tiLe = dtl != null ? 100 : 40;
+                    int tiLe = 100;
                     if (Util.isTrue(tiLe, 100)) {
                         sendEffectSuccessCombine(player);
                         Item item = ItemService.gI()

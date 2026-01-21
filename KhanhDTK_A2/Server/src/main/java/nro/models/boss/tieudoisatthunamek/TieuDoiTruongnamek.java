@@ -92,7 +92,7 @@ public class TieuDoiTruongnamek extends FutureBoss {
             BossFactory.createBoss(BossFactory.SO2NAMEK).zone = this.zone;
             BossFactory.createBoss(BossFactory.SO1NAMEK).zone = this.zone;
             ChangeMapService.gI().changeMapBySpaceShip(this, this.zone, ChangeMapService.TENNIS_SPACE_SHIP);
-            ServerNotify.gI().notify("Boss " + this.name + " vừa xuất hiện tại " + this.zone.map.mapName);
+            ServerNotify.gI().notify("Boss " + this.name + " vừa xuất hiện tại " + this.zone.map.mapName + " khu " + this.zone.zoneId);
         }
     }
 

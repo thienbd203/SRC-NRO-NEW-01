@@ -20,7 +20,7 @@ public class SuperBroly extends Boss {
         this.zone = getMapCanJoin(mapJoin[Util.nextInt(0, mapJoin.length - 1)]);
         int x = Util.nextInt(50, this.zone.map.mapWidth - 50);
         ChangeMapService.gI().changeMap(this, this.zone, x, this.zone.map.yPhysicInTop(x, 0));
-        ServerNotify.gI().notify("Boss " + this.name + " vừa xuất hiện tại " + this.zone.map.mapName + "");
+        ServerNotify.gI().notify("Boss " + this.name + " vừa xuất hiện tại " + this.zone.map.mapName + " khu " + this.zone.zoneId);
     }
 
     @Override

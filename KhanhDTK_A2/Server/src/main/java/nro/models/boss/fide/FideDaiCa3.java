@@ -73,7 +73,7 @@ public class FideDaiCa3 extends FutureBoss {
     public void joinMap() {
         if (this.zone != null) {
             ChangeMapService.gI().changeMap(this, zone, this.location.x, this.location.y);
-            ServerNotify.gI().notify("Boss " + this.name + " vừa xuất hiện tại " + this.zone.map.mapName);
+            ServerNotify.gI().notify("Boss " + this.name + " vừa xuất hiện tại " + this.zone.map.mapName + " khu " + this.zone.zoneId);
         }
     }
 }

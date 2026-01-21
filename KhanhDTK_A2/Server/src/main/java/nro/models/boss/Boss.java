@@ -311,7 +311,7 @@ public abstract class Boss extends Player implements BossInterface {
                     if (this.zone != null && !MapService.gI().isMapBanDoKhoBau(this.zone.map.mapId)
                             && !MapService.gI().isMapDoanhTrai(this.zone.map.mapId) && !(this instanceof BossMabuWar)
                             && !(this instanceof Boss_ThanMeo) && !(this instanceof Boss_Yanjiro)) {
-                        ServerNotify.gI().notify("Boss " + this.name + " vừa xuất hiện tại " + this.zone.map.mapName);
+                        ServerNotify.gI().notify("Boss " + this.name + " vừa xuất hiện tại " + this.zone.map.mapName + " khu " + this.zone.zoneId);
                         timeAppear = 0;
                     }
                 } else {
@@ -479,7 +479,7 @@ public abstract class Boss extends Player implements BossInterface {
                 if (!MapService.gI().isMapDoanhTrai(this.zone.map.mapId)
                         && !MapService.gI().isMapBanDoKhoBau(this.zone.map.mapId)) {
                     ChangeMapService.gI().changeMapBySpaceShip(this, this.zone, ChangeMapService.TENNIS_SPACE_SHIP);
-                    ServerNotify.gI().notify("Boss " + this.name + " vừa xuất hiện tại " + this.zone.map.mapName);
+                    ServerNotify.gI().notify("Boss " + this.name + " vừa xuất hiện tại " + this.zone.map.mapName + " khu " + this.zone.zoneId);
                     System.out.println("BOSS " + this.name + " (" + this.id + ")" + ": " + this.zone.map.mapName
                             + " khu vực " + this.zone.zoneId + "(" + this.zone.map.mapId + ")");
                 }
@@ -579,7 +579,7 @@ public abstract class Boss extends Player implements BossInterface {
     }
 
     protected void annouceBoss() {
-        ServerNotify.gI().notify("Boss " + this.name + " vừa xuất hiện tại " + this.zone.map.mapName);
+        ServerNotify.gI().notify("Boss " + this.name + " vừa xuất hiện tại " + this.zone.map.mapName + " khu " + this.zone.zoneId);
     }
 
     protected void changingBoss() {

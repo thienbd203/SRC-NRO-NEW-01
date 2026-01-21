@@ -205,14 +205,7 @@ public class Hirudegarn extends BigBoss {
 
     @Override
     public synchronized void injured(Player plAtt, int damage, boolean dieWhenHpFull) {
-        damage /= 2;
-        int max = this.point.hp / ((this.type + 1) * 20);
-        if (max <= 0) {
-            max = 1;
-        }
-        if (damage > max) {
-            damage = max;
-        }
+        // Boss nhận full sát thương, không giới hạn
         super.injured(plAtt, damage, dieWhenHpFull);
     }
 

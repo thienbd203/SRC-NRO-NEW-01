@@ -3162,21 +3162,21 @@ public class CombineServiceNew {
     private float getRatioPhaLeHoa(int star) {
         switch (star) {
             case 0:
-                return 79f;
+                return 100f;
             case 1:
-                return 49f;
+                return 100f;
             case 2:
-                return 19f;
+                return 100f;
             case 3:
-                return 4f;
+                return 100f;
             case 4:
-                return 1f;
+                return 100f;
             case 5:
-                return 1f;
+                return 100f;
             case 6:
-                return 1f;
+                return 100f;
             case 7:
-                return 0.5f;
+                return 100f;
         }
         return 0;
     }

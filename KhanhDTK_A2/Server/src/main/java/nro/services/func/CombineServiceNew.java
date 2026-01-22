@@ -2582,7 +2582,7 @@ public class CombineServiceNew {
                 if (star < MAX_STAR_ITEM) {
                     player.inventory.gold -= gold;
                     player.inventory.subGem(gem);
-                    if (Util.isTrue(player.combineNew.ratioCombine, 400)) {
+                    if (Util.isTrue(player.combineNew.ratioCombine, 100)) {
                         if (optionStar == null) {
                             item.itemOptions.add(new ItemOption(107, 1));
                         } else {
@@ -2633,7 +2633,7 @@ public class CombineServiceNew {
                     for (int i = 0; i < 10; i++) {
                         player.inventory.gold -= gold;
                         player.inventory.subGem(gem);
-                        if (Util.isTrue(player.combineNew.ratioCombine, 400)) {
+                        if (Util.isTrue(player.combineNew.ratioCombine, 100)) {
                             if (optionStar == null) {
                                 item.itemOptions.add(new ItemOption(107, 1));
                             } else {
@@ -2690,7 +2690,7 @@ public class CombineServiceNew {
                     for (int i = 0; i < 100; i++) {
                         player.inventory.gold -= gold;
                         player.inventory.subGem(gem);
-                        if (Util.isTrue(player.combineNew.ratioCombine, 400)) {
+                        if (Util.isTrue(player.combineNew.ratioCombine, 100)) {
                             if (optionStar == null) {
                                 item.itemOptions.add(new ItemOption(107, 1));
                             } else {
